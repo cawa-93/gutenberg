@@ -428,7 +428,16 @@ function gutenberg_register_packages_styles( $styles ) {
 		array( 'wp-components' ),
 		$version
 	);
-	$styles->add_data( 'wp-reusable-block', 'rtl', 'replace' );
+	$styles->add_data( 'wp-reusable-blocks', 'rtl', 'replace' );
+
+	gutenberg_override_style(
+		$styles,
+		'wp-patterns',
+		gutenberg_url( 'build/patterns/style.css' ),
+		array( 'wp-components' ),
+		$version
+	);
+	$styles->add_data( 'wp-patterns', 'rtl', 'replace' );
 
 	gutenberg_override_style(
 		$styles,
